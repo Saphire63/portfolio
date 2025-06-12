@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Accueil</title>
     <link rel="stylesheet" href="css/norme.css">
+    <link rel="stylesheet" href="css/accueil.css">
 </head>
 <body>
     <nav>
@@ -18,49 +19,109 @@
     </nav>
 
     <div class="container">
-        <header class="header">
-            <h1>Mon Portfolio</h1>
-            <p>Développeur passionné par la création d'expériences digitales innovantes</p>
-        </header>
-
-        <div class="main-content">
-            <aside class="sidebar">
-                <h2>Navigation</h2>
-                <ul>
-                    <li>Profil professionnel</li>
-                    <li>Compétences techniques</li>
-                    <li>Expériences</li>
-                    <li>Projets réalisés</li>
-                    <li>Formation</li>
-                    <li>Contact</li>
-                </ul>
-            </aside>
-
-            <main class="content">
-                <h2>Expériences professionnelles</h2>
+        <!-- Section Hero avec photo et intro -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="profile-section">
+                    <div class="profile-image-container">
+                        <img src="images/profil.jpg" alt="Ma photo de profil" class="profile-image">
+                        <div class="profile-border"></div>
+                    </div>
+                </div>
                 
-                <div class="experience-item">
-                    <div class="image-placeholder">Image</div>
-                    <h3>Développeur Full Stack</h3>
-                    <div class="date">2022 - Présent</div>
-                    <p>Développement d'applications web modernes utilisant les dernières technologies. Collaboration avec des équipes multidisciplinaires pour créer des solutions innovantes répondant aux besoins clients. Optimisation des performances et maintenance des systèmes existants.</p>
+                <div class="intro-section">
+                    <h1 class="main-title">Bonjour, je suis <span class="highlight">Théo</span></h1>
+                    <h2 class="subtitle">Développeur Passionné</h2>
+                    <p class="intro-text">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum repudiandae beatae temporibus, amet blanditiis, laboriosam rem doloribus quis porro aspernatur saepe voluptas perferendis dicta iusto eum velit consequatur, repellendus quia.
+                    </p>
+                    
+                    <div class="cta-buttons">
+                        <a href="html/projets.html" class="btn-primary">Voir mes projets</a>
+                        <a href="#contact" class="btn-secondary">Me contacter</a>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="experience-item">
-                    <div class="image-placeholder">Image</div>
-                    <h3>Développeur Frontend</h3>
-                    <div class="date">2020 - 2022</div>
-                    <p>Création d'interfaces utilisateur intuitives et responsives. Implémentation de designs créatifs en code HTML, CSS et JavaScript. Collaboration étroite avec les designers UX/UI pour garantir une expérience utilisateur optimale.</p>
+        <!-- Section Qui suis-je -->
+        <section class="about-section">
+            <div class="about-container">
+                <h2 class="section-title">Qui suis-je ?</h2>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>
+                            <strong>Passioné par la programation depuis mes années de lycée</strong>, j'ai décidé de faire de cette passions mon métier.
+                            C'est pourquoi j'ai intégréer le <strong>BUT Informatique</strong> à l'IUT d'Aubière
+                        </p>
+                        
+                        
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Années d'expérience</span>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projets réalisés</span>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <span class="stat-number">8+</span>
+                            <span class="stat-label">Technologies maîtrisées</span>
+                        </div>
+                        
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-label">Satisfaction client</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="experience-item">
-                    <div class="image-placeholder">Image</div>
-                    <h3>Stagiaire Développement Web</h3>
-                    <div class="date">2019 - 2020</div>
-                    <p>Première expérience dans le développement web. Apprentissage des bonnes pratiques de développement, participation aux projets d'équipe et découverte de l'environnement professionnel du développement logiciel.</p>
+        
+        <!-- Section Contact rapide -->
+        <section class="contact-section" id="contact">
+            <div class="contact-container">
+                <h2 class="section-title">Travaillons ensemble</h2>
+                <p class="contact-subtitle">Vous avez un projet en tête ? Discutons-en !</p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:theo.merrouche@gmail.com" class="contact-method">
+                        <span class="contact-icon">📧</span>
+                        <span class="contact-text">theo.merrouche@gmail.com</span>
+                    </a>
+                    
+                    <a href="tel:+33123456789" class="contact-method">
+                        <span class="contact-icon">📞</span>
+                        <span class="contact-text">+33 6 40 32 41 13</span>
+                    </a>
+                    
+                    <a href="https://linkedin.com/in/votre-profil" class="contact-method" target="_blank">
+                        <span class="contact-icon">💼</span>
+                        <span class="contact-text">LinkedIn</span>
+                    </a>
+                    
+                    <a href="https://github.com/votre-username" class="contact-method" target="_blank">
+                        <span class="contact-icon">💻</span>
+                        <span class="contact-text">GitHub</span>
+                    </a>
                 </div>
-            </main>
-        </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Bouton de téléchargement CV flottant -->
+    <div class="floating-cv">
+        <a href="documents/CV_MERROUCHE_theo.pdf" download class="cv-download">
+            <span class="cv-icon">📄</span>
+            <span class="cv-text">Télécharger mon CV</span>
+        </a>
     </div>
 </body>
 </html>
