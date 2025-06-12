@@ -1,0 +1,37 @@
+kind: pipeline
+type: docker
+name: Deploiement
+
+trigger:
+  event:
+    - push
+
+steps:
+  - name: code-analysis
+    image: aosapps/drone-sonar-plugin
+    settings: 
+      sonar_host:
+        from_secret: sonar_host
+      sonar_token:
+        from_secret: sonar_token
+
+  - name: docker-build-and-push
+    image: plugins/docker
+    settings:
+       dockerfile: docker/Dockerfile
+       context: .
+       registry: hub.codefirst.iut.uca.fr
+       mirror: https://proxy.iut.uca.fr:8443
+       repo: hub.codefirst.iut.uca.fr/theo.merrouche/protfoliofinanne
+       username:
+         from_secret: SECRET_REGISTRY_USERNAME
+       password:
+         from_secret: SECRET_REGISTRY_PASSWORD
+
+  - name: deploy-container
+    image: hub.codefirst.iut.uca.fr/thomas.bellembois/codefirst-dockerproxy-clientdrone:latest
+    environment:
+        IMAGENAME: hub.codefirst.iut.uca.fr/theo.merrouche/protfoliofinanne:latest
+        CONTAINERNAME: protfoliofinanne
+        COMMAND: create
+        OVERWRITE: true
