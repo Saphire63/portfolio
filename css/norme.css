@@ -1,0 +1,159 @@
+/* RESET ET BASE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background-color: #1a1a1a;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 80px; /* Espace pour la navbar fixe */
+}
+
+/* VARIABLES CSS - COULEURS */
+:root {
+    --primary-red: #dc2626;
+    --secondary-red: #ff4757;
+    --dark-bg: #1a1a1a;
+    --medium-dark: #2d2d2d;
+    --card-bg: rgba(40, 40, 40, 0.8);
+    --card-item-bg: rgba(30, 30, 30, 0.7);
+    --text-primary: #e0e0e0;
+    --text-secondary: #b0b0b0;
+    --text-muted: #c0c0c0;
+}
+
+/* NAVIGATION */
+nav {
+    background: rgba(30, 30, 30, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid var(--primary-red);
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    font-size: 1.5rem;
+    font-style:bold;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(220, 38, 38, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+nav a:hover::before {
+    left: 100%;
+}
+
+nav a:hover {
+    background: rgba(220, 38, 38, 0.2);
+    color: var(--secondary-red);
+    transform: translateY(-2px);
+}
+
+/* HEADER GLOBAL */
+.header {
+    margin-top: 80px;
+    text-align: center;
+    padding: 60px 0;
+}
+
+.header h1 {
+    font-size: 3.5rem;
+    background: linear-gradient(45deg, var(--secondary-red), var(--primary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 20px;
+    text-shadow: 0 0 30px rgba(220, 38, 38, 0.5);
+}
+
+.header p {
+    font-size: 1.3rem;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ANIMATIONS GLOBALES */
+@keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+}
+
+/* SCROLLBAR PERSONNALISÉE */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-red), var(--secondary-red));
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--secondary-red), var(--primary-red));
+}
+
+/* RESPONSIVE GLOBAL */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .container {
+        padding: 15px;
+        margin-top: 120px; /* Plus d'espace sur mobile car nav plus haute */
+    }
+}

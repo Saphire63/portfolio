@@ -1,0 +1,132 @@
+/* LAYOUT PRINCIPAL */
+.main-content {
+    display: block;
+    margin-top: 40px;
+}
+
+/* ZONE DE CONTENU */
+.content {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.content h2 {
+    color: var(--secondary-red);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-decoration: underline;
+    text-decoration-color: var(--primary-red);
+    text-underline-offset: 10px;
+}
+
+/* ITEMS D'EXPÉRIENCE */
+.experience-item {
+    background: var(--card-item-bg);
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--primary-red);
+    position: relative; /* Corrigé */
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.experience-item::before {
+    content: '';
+    position: absolute; /* Corrigé */
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(220, 38, 38, 0.1), transparent);
+    border-radius: 50% 0 0 50%;
+}
+
+.experience-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(220, 38, 38, 0.2);
+}
+
+.experience-item h3 {
+    color: var(--secondary-red);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.main-content h3 {
+    color: var(--secondary-red);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.experience-item .date {
+    color: var(--primary-red);
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.experience-item p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    text-align: justify;
+    margin-right: 20px;
+}
+
+/* PLACEHOLDERS D'IMAGES */
+.image-placeholder {
+    width: 175px;
+    height: 125px;
+    background: linear-gradient(45deg, rgba(220, 38, 38, 0.3), var(--card-bg));
+    border: 2px dashed var(--primary-red);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-red);
+    font-size: 0.9rem;
+    margin: 20px;
+    float: right;
+    position: relative;
+    overflow: hidden;
+}
+
+.image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+/* RESPONSIVE SPÉCIFIQUE AU CONTENU */
+@media (max-width: 768px) {
+    .content {
+        padding: 20px;
+    }
+    
+    .experience-item {
+        padding: 20px;
+        margin-right: 0;
+    }
+    
+    .experience-item p {
+        margin-right: 0;
+    }
+    
+    .image-placeholder {
+        float: none;
+        margin: 20px auto;
+        display: block;
+    }
+    
+    .content h2 {
+        font-size: 2rem;
+    }
+}

@@ -1,5 +1,5 @@
-[![Build Status](https://codefirst.iut.uca.fr/api/badges/theo.merrouche/protfoliofinanne/status.svg)](https://codefirst.iut.uca.fr/theo.merrouche/protfoliofinanne)  
+  [![Build Status](https://codefirst.iut.uca.fr/api/badges/theo.merrouche/protfolioFinAnnee/status.svg)](https://codefirst.iut.uca.fr/theo.merrouche/protfolioFinAnnee)  
 
-# protfoliofinanne
+# protfolioFinAnnee
 
 A simple template for a web site.
