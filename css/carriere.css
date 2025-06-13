@@ -79,7 +79,6 @@
 /* PLACEHOLDERS D'IMAGES */
 .image-placeholder {
     width: 175px;
-    height: 125px;
     background: linear-gradient(45deg, rgba(220, 38, 38, 0.3), var(--card-bg));
     border: 2px dashed var(--primary-red);
     border-radius: 10px;
