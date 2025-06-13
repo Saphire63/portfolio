@@ -1,0 +1,200 @@
+/* STYLES SPÉCIFIQUES ACTIVITÉS */
+.activities-section {
+    padding: 40px 0;
+}
+
+/* IMAGES POUR LES ACTIVITÉS */
+.activity-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 2px solid rgba(220, 38, 38, 0.3);
+    transition: all 0.3s ease;
+}
+
+.activity-image:hover {
+    border-color: var(--secondary-red);
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(220, 38, 38, 0.4);
+}
+
+.sub-activity-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    transition: all 0.3s ease;
+}
+
+.sub-activity-image:hover {
+    border-color: var(--secondary-red);
+    transform: scale(1.02);
+}
+
+.activity-card {
+    background: var(--card-bg);
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(220, 38, 38, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.activity-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(220, 38, 38, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.6s ease;
+    opacity: 0;
+}
+
+.activity-card:hover::before {
+    animation: shimmer 1.5s ease-in-out;
+    opacity: 1;
+}
+
+.activity-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-red);
+    box-shadow: 0 20px 50px rgba(220, 38, 38, 0.3);
+}
+
+.activity-title {
+    font-size: 2.5rem;
+    color: var(--secondary-red);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.activity-icon {
+    font-size: 3rem;
+    background: linear-gradient(45deg, var(--primary-red), var(--secondary-red));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.activity-description {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+/* SOUS-SECTIONS BADMINTON */
+.sub-activities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.sub-activity {
+    background: var(--card-item-bg);
+    border-radius: 15px;
+    padding: 30px;
+    border: 1px solid rgba(255, 71, 87, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.sub-activity:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary-red);
+    box-shadow: 0 15px 40px rgba(255, 71, 87, 0.2);
+}
+
+.sub-activity-title {
+    font-size: 1.8rem;
+    color: var(--secondary-red);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sub-activity-icon {
+    font-size: 1.5rem;
+}
+
+.sub-activity-content {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* ANIMATIONS SPÉCIFIQUES */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.activity-card {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.activity-card:nth-child(2) {
+    animation-delay: 0.2s;
+    animation-fill-mode: both;
+}
+
+/* RESPONSIVE SPÉCIFIQUE ACTIVITÉS */
+@media (max-width: 768px) {
+    .activity-card {
+        padding: 25px;
+        margin-bottom: 25px;
+    }
+
+    .activity-title {
+        font-size: 2rem;
+    }
+
+    .activity-icon {
+        font-size: 2.2rem;
+    }
+
+    .activity-image {
+        height: 200px;
+    }
+
+    .sub-activity-image {
+        height: 150px;
+    }
+
+    .sub-activities {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sub-activity {
+        padding: 20px;
+    }
+
+    .sub-activity-title {
+        font-size: 1.5rem;
+    }
+}
+
+p{
+    text-align: justify;
+}

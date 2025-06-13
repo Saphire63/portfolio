@@ -83,7 +83,7 @@
 
 /* SECTION INTRO */
 .intro-section {
-    text-align: left;
+    text-align: justify;
 }
 
 .main-title {
@@ -113,7 +113,7 @@
     line-height: 1.8;
     color: var(--text-secondary);
     margin-bottom: 40px;
-    max-width: 500px;
+    padding-right:100px ;
 }
 
 /* BOUTONS CTA */
