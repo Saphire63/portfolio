@@ -3,34 +3,371 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Détails-McXo</title>
+    <title>MCX0 - Jeu tour par tour</title>
     <link rel="stylesheet" href="../css/norme.css">
-    <link rel="stylesheet" href="../css/projets.css">
+    <link rel="stylesheet" href="../css/mxco.css">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="carriere.html">Carrière</a></li>
-            <li><a href="projets.html">Projets</a></li>
-            <li><a href="activites.html">Activités</a></li>
-        </ul>
+        <div class="nav-container">
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="carriere.html">Carrière</a></li>
+                <li><a href="projets.html">Projets</a></li>
+                <li><a href="activites.html">Activités</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
-        
+        <!-- Navigation de retour -->
+        <div class="back-nav">
+            <a href="projets.html" class="back-link">
+                <span>←</span>
+                Retour aux projets
+            </a>
+        </div>
 
-        <div class="main-content">
-
+        <!-- Hero Section -->
+        <div class="project-hero">
+            <h1 class="project-title">MCX0</h1>
+            <p class="project-subtitle">Jeu de stratégie tour par tour - Réplique du jeu de société Quixo</p>
             
+            <div class="project-tags">
+                <span class="tag">.NET MAUI</span>
+                <span class="tag">C#</span>
+                <span class="tag">Xaml</span>
+                <span class="tag">Jeu de stratégie</span>
+            </div>
+
+        </div>
+
+        <!-- Description du projet -->
+        <div class="project-section">
+            <h2 class="section-title">
+                <span class="section-icon">📋</span>
+                Description du projet
+            </h2>
+            <div class="section-content">
+                <p>
+                    <strong>MCX0</strong> est une réplique numérique du célèbre jeu de société Quixo, développée en .NET MAUI. 
+                    Ce jeu de stratégie oppose deux joueurs qui doivent aligner cinq cubes identiques en déplaçant 
+                    stratégiquement les pions sur un plateau de 5x5.
+                </p>
+                <br>
+                <p>
+                    Le projet a été réalisé en <strong>4 mois</strong> dans le cadre de mes études, avec un focus sur 
+                    l'architecture logicielle propre et une interface utilisateur intuitive. L'objectif était de créer 
+                    une expérience de jeu fluide tout en respectant les règles originales du Quixo.
+                </p>
+                <br>
+                <p>
+                    <strong>Durée de développement :</strong> 4 mois<br>
+                    <strong>Contexte :</strong> Projet étudiant<br>
+                    <strong>Équipe :</strong> Développement solo
+                </p>
+            </div>
+        </div>
+
+        <!-- Fonctionnalités -->
+        <div class="project-section">
+            <h2 class="section-title">
+                <span class="section-icon">⚡</span>
+                Fonctionnalités principales
+            </h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span>🎮</span>
+                        Jeu contre l'ordinateur
+                    </h3>
+                    <p class="feature-description">
+                        Affrontez un bot aléatoire ou jouez à deux sur la même machine. 
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span>🎯</span>
+                        Respect des règles
+                    </h3>
+                    <p class="feature-description">
+                        Reproduction fidèle des règles originales du Quixo avec validation automatique des mouvements.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <h3 class="feature-title">
+                        <span>💾</span>
+                        Sauvegarde de partie
+                    </h3>
+                    <p class="feature-description">
+                        Possibilité de sauvegarder et reprendre une partie en cours pour ne jamais perdre sa progression.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Galerie d'images -->
+        <div class="project-section">
+            <h2 class="section-title">
+                <span class="section-icon">🖼️</span>
+                Captures d'écran
+            </h2>
+            <div class="image-gallery">
+                <div class="gallery-item">
+                    <img src="../images/menumcxo.png" alt="Menu principal MCX0" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Menu principal</h4>
+                        <p>Interface d'accueil avec options de jeu</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="../images/gameplay.png" alt="Gameplay MCX0" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Plateau de jeu</h4>
+                        <p>Vue du plateau 5x5 en cours de partie</p>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="../images/regles.png" alt="regles MCX0" class="gallery-image">
+                    <div class="gallery-overlay">
+                        <h4>Regles</h4>
+                        <p>Affichage des regles</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Code samples -->
+        <div class="project-section">
+            <h2 class="section-title">
+                <span class="section-icon">💻</span>
+                Extraits de code
+            </h2>
+            <div class="section-content">
+                <p>Voici quelques exemples de code représentatifs du projet :</p>
+                
+                <div class="code-section">
+                    <div class="code-header">
+                        <span class="code-title">Logique de validation des mouvements</span>
+                        <span class="code-language">C#</span>
+                    </div>
+                    <div class="code-block">
+/// &lt;summary>
+/// Méthode qui déplace un pion sur le plateau en verifiant si le pion est sur un bord
+/// et en verifiant si le joueur a le droit de déplacer le pion dans cette direction 
+/// &lt;/summary>
+/// &lt;param name="x">coordonées x du pion</param>
+/// &lt;param name="y">coordonées y du pion</param>
+/// &lt;param name="direction">direction de la où on veux placer le pion</param>
+/// &lt;param name="signeJoueurCourant">le signe du joueur qui veux déplacer le pions</param>
+/// &lt;exception cref="ArgumentException">exeption si le pion n'est pas au bords</exception>
+public void DeplacerPion(int x, int y, Direction? direction, string signeJoueurCourant)
+{
+
+    // Vérifie que le pion est sur un bord
+    if (!VerificateurCote.EstSurUnCoter(x, y))
+        throw new ArgumentException("Le pion doit être sur un bord."); 
+
+    string signePionEnMain = signeJoueurCourant; //copie du signe pour eviter l'ecrasement a cause des reference en c#
+
+    switch (direction) //enum pour d g h b
+    {
+        case Direction.Gauche:
+
+            DeplacerPionVersLaGauche(x, y, signePionEnMain);
+            break;
+
+
+        case Direction.Droite:
+
+            DeplacerPionVersLaDroite(x, y, signePionEnMain);
+            break;
+
+        case Direction.Haut:
+
+            DeplacerPionVersLeHaut(x, y, signePionEnMain);
+            break;
+
+        case Direction.Bas:
+            DeplacerPionVersLeBas(x, y, signePionEnMain);
+            break;
+    }
+}
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <div class="code-header">
+                        <span class="code-title">Interface XAML du plateau</span>
+                        <span class="code-language">XAML</span>
+                    </div>
+                    <div class="code-block">
+&lt;CollectionView x:Name="GrilleAffichage"  
+       ItemsSource="{Binding CollectionAPlat}"  
+       SelectionMode="Multiple"
+       SelectionChanged="GrilleSelectionChanged"
+       HorizontalOptions="Fill"  
+       VerticalOptions="Center"  
+               Grid.Column="1"  
+               Grid.Row="2"  
+               Grid.RowSpan="2"  
+               Grid.ColumnSpan="3"&gt;
+
+    &lt;CollectionView.ItemsLayout&gt;
+        &lt;GridItemsLayout Orientation="Vertical"  
+                         Span="5"
+                         VerticalItemSpacing="10" 
+                         HorizontalItemSpacing="10" /&gt;
+    &lt;/CollectionView.ItemsLayout&gt;
+    
+    &lt;CollectionView.ItemTemplate&gt;
+        &lt;DataTemplate&gt;
+            &lt;Border WidthRequest="60" HeightRequest="60"  
+           Margin="4"
+           Stroke="Transparent"
+           BackgroundColor="{StaticResource McXoRouge}"
+               IsEnabled="{Binding Coordonnees, Converter={StaticResource EstSurUnCoteConverter}}"&gt;
+
+
+                &lt;VisualStateManager.VisualStateGroups&gt;
+                    &lt;VisualStateGroup Name="CommonStates"&gt;
+                        &lt;VisualState Name="Normal" /&gt;
+                        &lt;VisualState Name="Selected"&gt;
+                            &lt;VisualState.Setters&gt;
+                                &lt;Setter Property="BackgroundColor" Value="DarkRed" /&gt;
+                                &lt;Setter Property="Stroke" Value="White" /&gt;
+                            &lt;/VisualState.Setters&gt;
+                        &lt;/VisualState&gt;
+
+                        &lt;VisualState Name="Disabled"&gt;
+                            &lt;VisualState.Setters&gt;
+                                &lt;Setter Property="BackgroundColor" Value="DarkRed"/&gt;
+                                &lt;Setter Property="Opacity" Value="0.6"/&gt;
+                            &lt;/VisualState.Setters&gt;
+                        &lt;/VisualState&gt;
+                    &lt;/VisualStateGroup&gt;
+                &lt;/VisualStateManager.VisualStateGroups&gt;
+
+
+                &lt;Border.StrokeShape&gt;
+                    &lt;RoundRectangle CornerRadius="10" /&gt;
+                &lt;/Border.StrokeShape&gt;
+
+
+                &lt;Label Text="{Binding }"  
+                      FontSize="Large"  
+               TextColor="{StaticResource McXoTexte}"  
+               HorizontalTextAlignment="Center"  
+               VerticalTextAlignment="Center"/&gt;
+            &lt;/Border&gt;
+        &lt;/DataTemplate&gt;
+    &lt;/CollectionView.ItemTemplate&gt;
+&lt;/CollectionView&gt;
+
+                    </div>
+                </div>
+
+                <div class="code-section">
+                    <div class="code-header">
+                        <span class="code-title">Algorithme du bot</span>
+                        <span class="code-language">C#</span>
+                    </div>
+                    <div class="code-block">
+public List&lt;Direction> MouvementPossible(Position position)
+{
+    List&lt;Direction> mouvementPossible = new List&lt;Direction>();
+    if (position.X > 0) mouvementPossible.Add(Direction.Haut);
+    if (position.Y > 0) mouvementPossible.Add(Direction.Gauche);
+    if (position.X < 4) mouvementPossible.Add(Direction.Bas);
+    if (position.Y < 4) mouvementPossible.Add(Direction.Droite);
+    return mouvementPossible;
+}
+
+private void VerificationPion(Pion pion)
+{
+    if (pion.Signe == ".")
+    {
+        pion.Signe = Signe;
+    }
+}
+public void JouerRandom(Grille g)
+{
+    Deplaceur d =new Deplaceur(g);
+    List&lt;Position> listeDeCoup = new List&lt;Position>();
+
+    for (int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {
+
+            if(VerificateurCote.EstSurUnCoter(i, j))
+            {
+
+                Pion pion = g.GetPion(i, j);
+                if (pion.Signe == "." || pion.Signe == Signe)
+                {
+                    listeDeCoup.Add(pion.Coordonnees);
+                }
+            }
+            
+        }
+    }
+    if(listeDeCoup.Count > 0)
+    {
+        int i = RandomNumberGenerator.GetInt32(listeDeCoup.Count);
+        Position coupRandom = listeDeCoup[i];
+
+        Pion pion = g.GetPion(coupRandom.X, coupRandom.Y);
+
+        VerificationPion(pion);
+        List&lt;Direction> mouvementRandom = MouvementPossible(coupRandom);
+        if (mouvementRandom.Count > 0)
+        {
+            int j = RandomNumberGenerator.GetInt32(mouvementRandom.Count);
+            Direction mouvement = mouvementRandom[j];
+            d.DeplacerPion(coupRandom.X, coupRandom.Y, mouvement, Signe);
+        }
+    }
+}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Défis et apprentissages -->
+        <div class="project-section">
+            <h2 class="section-title">
+                <span class="section-icon">🎯</span>
+                Défis et apprentissages
+            </h2>
+            <div class="section-content">
+                <h3 style="color: var(--secondary-red); margin-bottom: 15px;">Défis rencontrés :</h3>
+                <ul style="margin-left: 20px; margin-bottom: 25px;">
+                    <li style="margin-bottom: 8px;"><strong>Implémentation des règles complexes :</strong> Traduire les règles physiques du Quixo en logique informatique</li>
+                    <li style="margin-bottom: 8px;"><strong>Gestion du plateau de jeu  :</strong>Gérer les actions des joueurs entre la vue et le model en gardant la structure MVC</li>
+                    <li style="margin-bottom: 8px;"><strong>Gestion des états :</strong> Maintenir la cohérence du jeu à travers les différentes actions</li>
+                </ul>
+                
+                <h3 style="color: var(--secondary-red); margin-bottom: 15px;">Compétences développées :</h3>
+                <ul style="margin-left: 20px;">
+                    <li style="margin-bottom: 8px;"><strong>Architecture logicielle :</strong> Séparation des responsabilités et pattern MVC </li>
+                    <li style="margin-bottom: 8px;"><strong>Développement Desktop:</strong> Maîtrise de .NET MAUI, C# et XAML</li>
+                    <li style="margin-bottom: 8px;"><strong>Tests unitaires :</strong> Génération de tests pour une meilleur maintenabilité et une meilleure compréhension des erreurs</li>
+                </ul>
+            </div>
         </div>
     </div>
-</body>
-<footer class="footer">
+
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="footer-content">
             <p class="footer-text">
                 <span class="footer-copyright">© 2025 Merrouche Théo.</span> Tous droits réservés.
             </p>
         </div>
     </footer>
+</body>
 </html>
