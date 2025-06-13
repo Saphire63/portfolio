@@ -6,12 +6,12 @@
     <title>Portfolio - Accueil</title>
     <link rel="stylesheet" href="css/norme.css">
     <link rel="stylesheet" href="css/accueil.css">
+    <link rel="stylesheet" href="css/competences.css">
 </head>
 <body>
     <nav>
         <ul>
             <li><a href="index.html">Accueil</a></li>
-            <li><a href="html/competences.html">Compétences</a></li>
             <li><a href="html/carriere.html">Carrière</a></li>
             <li><a href="html/projets.html">Projets</a></li>
             <li><a href="html/activites.html">Activités</a></li>
@@ -43,47 +43,56 @@
                 </div>
             </div>
         </section>
-
-        <!-- Section Qui suis-je -->
-        <section class="about-section">
-            <div class="about-container">
-                <h2 class="section-title">Qui suis-je ?</h2>
+<!-- Section Spécialités -->
+        <section class="specialties-section">
+            <h2 class="section-title">Mes spécialités</h2>
+            <div class="specialty-card">
+                    <div class="specialty-icon"><img src="images/C.png" class="speciality-image"/></div>
+                    <h3>Algorithmie</h3>
+                    <p>
+                    Grâce à ma formation et mes projets personnels, j’ai acquis de solides compétences en algorithmie. J’aime particulièrement résoudre des problèmes complexes en concevant des algorithmes efficaces et lisibles.
+                    En <strong>C</strong>, j’ai appris à manipuler la mémoire, structurer des données et optimiser les performances. Le langage m’a permis de développer une rigueur particulière dans l’écriture du code, essentielle pour comprendre le bas niveau.
+                    <br><br>
+                    Avec le <strong>C++</strong>, j’ai renforcé mes compétences en <strong> programmation orientée objet (POO)</strong>, en créant des structures logiques pour organiser des programmes plus complexes. J’ai également exploré la <strong> STL</strong> (bibliothèque standard de C++) pour manipuler les structures de données avec flexibilité.
+                    <br><br>
+                    En <strong>C#</strong>, j’ai développé des applications plus modernes, notamment des interfaces graphiques et des jeux en console. Ce langage m’a permis de combiner la POO avec une syntaxe plus intuitive, tout en explorant des concepts comme les événements ou les délégués.
+                    <br><br>
+                    </p>
+                </div>
+            <div class="specialties-grid">
+                <div class="specialty-card">
+                    <div class="specialty-icon">🖥️</div>
+                    <h3>Applications</h3>
+                    <p>
+                        Développement d'application Desktop à l'aide de <strong>.NET MAUI</strong>
+                        <br><br>
+                        j'ai développé un jeu de société en .NET MAUI ce qui m'a permis de me familiariser avec la création d'interfaces utilisateur et la gestion des événements.
+                    </p>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-icon">🎨</div>
+                    <h3>Interfaces Web</h3>
+                    <p>
+                        Conception d'interfaces claires et modernes en <strong>HTMLCSS</strong>.
+                        Grâce à mes projets web, j’ai développé une sensibilité au design et à l’ergonomie.
+                        <br><br>
+                        J’utilise également <strong>XAML</strong> dans le cadre du développement d’interfaces sous .NET MAUI.
+                    </p>
+                </div>
                 
-                <div class="about-content">
-                    <div class="about-text">
-                        <p>
-                            <strong>Passioné par la programation depuis mes années de lycée</strong>, j'ai décidé de faire de cette passions mon métier.
-                            C'est pourquoi j'ai intégréer le <strong>BUT Informatique</strong> à l'IUT d'Aubière
-                        </p>
-                        
-                        
+                
+                <div class="specialty-card">
+                    <div class="specialty-icon">🗃️</div>
+                    <h3>Bases de données</h3>
+                    <p>
+                        J’ai acquis une maîtrise des bases de données relationnelles comme <strong>PostgreSQL</strong> et <strong>SQLite</strong>.
+                        <br><br>
+                        Capable de concevoir des schémas relationnels, d’écrire des requêtes SQL complexes. J’ai également travaillé avec des jointures, des sous-requêtes, des fonctions et des vues.</p>
                     </div>
                     
-                    <div class="stats-grid">
-                        <div class="stat-item">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Années d'expérience</span>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Projets réalisés</span>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <span class="stat-number">8+</span>
-                            <span class="stat-label">Technologies maîtrisées</span>
-                        </div>
-                        
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Satisfaction client</span>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
-
         
         <!-- Section Contact rapide -->
         <section class="contact-section" id="contact">

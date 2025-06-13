@@ -5,6 +5,10 @@
     margin: 0 auto;
 }
 
+.specialties-section strong {
+    color: var(--secondary-red);
+}
+
 .specialties-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -41,4 +45,10 @@
 .specialty-card p {
     color: var(--text-secondary);
     line-height: 1.6;
+}
+
+.speciality-image {
+    width: 10%;
+    height: auto;
+    margin: 0;
 }
