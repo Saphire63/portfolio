@@ -3,4 +3,4 @@
 # protfolioFinAnnee
 
 A simple template for a web site.
-  
+## quelques modifications a apporté car issu du git de CodeFirst ( pour les étudiants de BUT Informatique )
