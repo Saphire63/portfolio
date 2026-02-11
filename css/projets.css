@@ -113,22 +113,21 @@
     transform: translateY(-2px);
 }
 
-.image-placeholder {
-    width: 100%;
+
+.image-placeholder  {
+    width: auto;
+    margin: 0 auto;
+    max-height: 350px; /* limite si image verticale énorme */
     background: linear-gradient(135deg, rgba(220, 38, 38, 0.1), rgba(255, 71, 87, 0.1));
     border: 2px dashed var(--primary-red);
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--primary-red);
-    font-size: 1.1em;
-    font-weight: 500;
     margin-bottom: 20px;
-    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 10px;
 }
-
-
 
 project-card:hover .image-placeholder {
     background: linear-gradient(135deg, rgba(220, 38, 38, 0.2), rgba(255, 71, 87, 0.2));
